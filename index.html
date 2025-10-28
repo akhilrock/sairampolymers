@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sai Ram Polymer Packaging Industry</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      color: #e0e0e0;
+      overflow-x: hidden;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(20, 20, 20, 0.8);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 50px;
+      z-index: 1000;
+    }
+    header img {
+      height: 90px;
+      transition: transform 0.3s ease;
+    }
+    header img:hover {
+      transform: scale(1.1);
+    }
+    header h1 {
+      font-size: 1.8rem;
+      color: #00b4d8;
+      font-weight: 700;
+      text-shadow: 0 0 10px rgba(0,180,216,0.8);
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 120px 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero {
+      background: rgba(0,0,0,0.3);
+      padding: 100px 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 50px rgba(0,180,216,0.2);
+      color: white;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 20px #00b4d8;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      opacity: 0.9;
+    }
+
+    .products {
+      background: rgba(255,255,255,0.05);
+      border-radius: 30px;
+      padding: 80px 40px;
+      margin-top: 60px;
+      box-shadow: inset 0 0 40px rgba(255,255,255,0.05);
+    }
+    .products h2 {
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+      color: #00b4d8;
+      text-shadow: 0 0 15px rgba(0,180,216,0.6);
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      width: 100%;
+      max-width: 1200px;
+    }
+    .product {
+      background: rgba(255,255,255,0.08);
+      border-radius: 15px;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      box-shadow: 0 0 20px rgba(0,180,216,0.2);
+    }
+    .product:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px rgba(0,180,216,0.5);
+    }
+    .product img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .product h3 {
+      margin: 15px 0;
+      color: #90e0ef;
+      font-size: 1.2rem;
+    }
+
+    .contact {
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 80px 40px;
+      margin-top: 50px;
+      color: #caf0f8;
+      box-shadow: 0 0 30px rgba(0,180,216,0.2);
+    }
+    .contact h2 {
+      font-size: 2.3rem;
+      margin-bottom: 25px;
+      text-shadow: 0 0 15px #00b4d8;
+    }
+    .contact-info p {
+      font-size: 1.1rem;
+      margin: 8px 0;
+      opacity: 0.9;
+    }
+
+    .contact a {
+      color: #00b4d8;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    .contact a:hover {
+      color: #90e0ef;
+    }
+
+    footer {
+      background: rgba(0,0,0,0.8);
+      color: #90e0ef;
+      padding: 25px;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+      }
+      header img {
+        height: 70px;
+      }
+      .hero h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://raw.githubusercontent.com/akhilrock/-assets-images-/main/logo.png" alt="Sai Ram Logo">
+    <h1>Sai Ram Polymer Packaging Industry</h1>
+  </header>
+
+  <section class="hero">
+    <h2>Innovative Packaging for a Sustainable Future</h2>
+    <p>We specialize in manufacturing premium-quality plastic covers, carry bags, liners, shrink film rolls, stretch film rolls, biodegradable bags, garbage bags, and industrial gloves — ensuring eco-friendly, durable, and reliable packaging for every industry.</p>
+  </section>
+
+  <section class="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/akhilrock/-assets-images-/main/plastic-carry-bag--918.jpg" alt="Plastic Covers">
+        <h3>Plastic Covers</h3>
+      </div>
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/akhilrock/-assets-images-/main/biodegradablecarry.jpeg" alt="Biodegradable Carry Bags">
+        <h3>Biodegradable Carry Bags</h3>
+      </div>
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/akhilrock/-assets-images-/main/pp-liners-roll.jpg" alt="Liners">
+        <h3>Liners</h3>
+      </div>
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/akhilrock/-assets-images-/main/shrink%20flim.png" alt="Shrink Film Rolls">
+        <h3>Shrink Film Rolls</h3>
+      </div>
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/akhilrock/-assets-images-/main/stretch%20flim.jpg" alt="Stretch Film Rolls">
+        <h3>Stretch Film Rolls</h3>
+      </div>
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/akhilrock/-assets-images-/main/garbage.jpg" alt="Garbage Bags">
+        <h3>Garbage Bags</h3>
+      </div>
+      <div class="product">
+        <img src="https://raw.githubusercontent.com/akhilrock/-assets-images-/main/gloves.png" alt="Industrial Gloves">
+        <h3>Industrial Gloves</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <p><strong>Phone:</strong> 9652557412, 9966274510, 7013034919</p>
+      <p><strong>Email:</strong> <a href="mailto:sairampolymers6341@gmail.com">sairampolymers6341@gmail.com</a></p>
+      <p><strong>Address:</strong> 2-98, Vinayak Nagar, Bollaram, Hyderabad, Telangana, 502325</p>
+      <p><strong>GST No:</strong> 36BFZPH6341J1ZU</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Sai Ram Polymer Packaging Industry | Designed with 💙 by Akhil</p>
+  </footer>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from('.hero h2', {opacity:0, y:60, duration:1});
+    gsap.from('.hero p', {opacity:0, y:60, duration:1, delay:0.4});
+
+    gsap.utils.toArray('.product').forEach((box, i) => {
+      gsap.from(box, {
+        scrollTrigger: {
+          trigger: box,
+          start: 'top 80%'
+        },
+        opacity: 0,
+        y: 80,
+        duration: 1,
+        delay: i * 0.1
+      });
+    });
+
+    gsap.from('.contact-info p', {
+      scrollTrigger: {
+        trigger: '.contact-info',
+        start: 'top 80%'
+      },
+      opacity: 0,
+      y: 40,
+      duration: 1,
+      stagger: 0.2
+    });
+  </script>
+</body>
+</html>
